@@ -20,8 +20,10 @@ class BlackMainViewController: UIViewController {
         
        blackTableView.register(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: "FirstTable" )
        blackTableView.register(UINib(nibName: "SecondTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondTable" )
-        blackTableView.dataSource = self
-        blackTableView.delegate = self
+       blackTableView.register(UINib(nibName: "ThirdTableViewCell", bundle: nil), forCellReuseIdentifier: "ThirdTableView")
+       blackTableView.register(UINib(nibName: "TwoTVCell", bundle: nil), forCellReuseIdentifier: "TwoTVCell" )
+       blackTableView.dataSource = self
+       blackTableView.delegate = self
         
     }
 
@@ -34,7 +36,8 @@ extension BlackMainViewController: UITableViewDataSource, UITableViewDelegate
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        
+        return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -48,14 +51,26 @@ extension BlackMainViewController: UITableViewDataSource, UITableViewDelegate
             
             cell.addMoreClickedHandler = {
                 guard let nextVC = self.storyboard?.instantiateViewController(identifier: "webView") else {return}
-              
                 self.present(nextVC, animated: true, completion: nil)
             }
             
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTable", for: indexPath) as! FirstTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ThirdTableView", for: indexPath) as! ThirdTableViewCell
+            return cell
             
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SecondTable", for: indexPath) as! SecondTableViewCell
+            
+            cell.addMoreClickedHandler = {
+                guard let nextVC = self.storyboard?.instantiateViewController(identifier: "webView") else {return}
+                self.present(nextVC, animated: true, completion: nil)
+            }
+            
+            return cell
+            
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TwoTVCell", for: indexPath) as! TwoTVCell
             return cell
             
         default:
@@ -71,7 +86,12 @@ extension BlackMainViewController: UITableViewDataSource, UITableViewDelegate
         case 1:
             return 50
         case 2:
-            return 200
+            return 150
+        case 3:
+            return 80
+        case 4:
+            return 300
+            
         default:
             return 0
         }
