@@ -18,7 +18,9 @@ class BlackTwoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        twotableView.register(UINib(nibName: "HorizontalTVCell", bundle: nil), forCellReuseIdentifier: "Horizontal")
+        twotableView.dataSource = self
+        twotableView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -33,4 +35,19 @@ class BlackTwoViewController: UIViewController {
     }
     */
 
+}
+extension BlackTwoViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Horizontal", for: indexPath) as! HorizontalTVCell
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 500
+    }
 }
