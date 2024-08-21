@@ -34,7 +34,7 @@ extension FirstTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "First", for: indexPath) as! FirstCollectionViewCell
-        cell.img?.image = UIImage(named: "1")
+       
         return cell
     }
     

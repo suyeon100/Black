@@ -8,10 +8,16 @@
 import UIKit
 
 class TwoCollectionViewCell: UICollectionViewCell {
+    
+    
+    @IBOutlet weak var image: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        image.layer.cornerRadius = 15
+      
     }
 
 }
