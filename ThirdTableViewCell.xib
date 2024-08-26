@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="210" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8Lo-KQ-Kqm">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_5905" translatesAutoresizingMaskIntoConstraints="NO" id="8Lo-KQ-Kqm">
                         <rect key="frame" x="0.0" y="0.0" width="210" height="150"/>
                     </imageView>
                 </subviews>
@@ -34,7 +34,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="1.jpg" width="1179" height="762"/>
+        <image name="IMG_5905" width="1179" height="762"/>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

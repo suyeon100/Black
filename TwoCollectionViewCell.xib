@@ -19,8 +19,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="I" translatesAutoresizingMaskIntoConstraints="NO" id="b9r-Od-Cal">
                         <rect key="frame" x="5" y="5" width="190" height="245"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두 뺨에 낭만 가득 두 뺨에 낭만 가득" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-Dt-GLF">
-                        <rect key="frame" x="13" y="265" width="115" height="40.666666666666686"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두 뺨에 낭만 가득 두 뺨에 낭만 가득" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-Dt-GLF">
+                        <rect key="frame" x="13" y="265" width="182" height="40.666666666666686"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -35,14 +35,15 @@
                 <constraint firstItem="TPC-Dt-GLF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="13" id="EBB-q3-irR"/>
                 <constraint firstItem="b9r-Od-Cal" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Nbp-qi-pbU"/>
                 <constraint firstAttribute="trailing" secondItem="b9r-Od-Cal" secondAttribute="trailing" constant="5" id="Qqw-Rb-iO6"/>
-                <constraint firstAttribute="trailing" secondItem="TPC-Dt-GLF" secondAttribute="trailing" constant="72" id="ins-dK-IbY"/>
+                <constraint firstAttribute="trailing" secondItem="TPC-Dt-GLF" secondAttribute="trailing" constant="5" id="VPp-Ld-iSx"/>
                 <constraint firstItem="TPC-Dt-GLF" firstAttribute="top" secondItem="b9r-Od-Cal" secondAttribute="bottom" constant="15" id="rjv-xc-RdR"/>
             </constraints>
             <size key="customSize" width="205" height="341"/>
             <connections>
+                <outlet property="colLabel" destination="TPC-Dt-GLF" id="7iC-Sf-E4T"/>
                 <outlet property="image" destination="b9r-Od-Cal" id="G7D-Ff-cgH"/>
             </connections>
-            <point key="canvasLocation" x="232.82442748091603" y="79.577464788732399"/>
+            <point key="canvasLocation" x="232.06106870229007" y="79.577464788732399"/>
         </collectionViewCell>
     </objects>
     <resources>
