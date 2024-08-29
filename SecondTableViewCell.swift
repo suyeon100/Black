@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import WebKit
 
 
 class SecondTableViewCell: UITableViewCell{ //더보기
@@ -35,7 +34,6 @@ class SecondTableViewCell: UITableViewCell{ //더보기
             _addMoreClickedHandler()
         }
     }
-  
 
     
 }

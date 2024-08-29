@@ -33,15 +33,27 @@
                             <action selector="moreBtnn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gTI-s7-cS5"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 특가✨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdt-fe-0We">
+                        <rect key="frame" x="15.999999999999993" y="12" width="126.33333333333331" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="PG5-4q-NTJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="gRm-ms-6Rq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="8Cd-s0-xjX"/>
+                    <constraint firstItem="hdt-fe-0We" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="8Jq-6n-l6e"/>
                     <constraint firstAttribute="trailing" secondItem="gRm-ms-6Rq" secondAttribute="trailing" constant="27" id="D3h-BN-BxG"/>
                     <constraint firstAttribute="trailing" secondItem="cNv-T1-WF7" secondAttribute="trailing" constant="21" id="Dc5-jb-ZxS"/>
                     <constraint firstAttribute="bottom" secondItem="gRm-ms-6Rq" secondAttribute="bottom" constant="19" id="Efp-0t-3I2"/>
                     <constraint firstAttribute="bottom" secondItem="cNv-T1-WF7" secondAttribute="bottom" constant="15" id="JHO-k2-Vjs"/>
                     <constraint firstItem="cNv-T1-WF7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="X1L-LB-rqE"/>
+                    <constraint firstAttribute="bottom" secondItem="hdt-fe-0We" secondAttribute="bottom" constant="11" id="geq-FD-x6z"/>
+                    <constraint firstItem="hdt-fe-0We" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vDY-NN-82Q"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

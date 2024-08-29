@@ -44,7 +44,13 @@ extension TwoTVCell: UICollectionViewDataSource, UICollectionViewDelegate, UICol
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 350)
+        
+        let margin: CGFloat = 20
+        let width: CGFloat = (collectionView.bounds.width - margin)/2
+        let height: CGFloat = width * 2
+
+        return CGSize(width: width, height: height )
+      //  return CGSize(width: 200, height: 350)
         
     }
     

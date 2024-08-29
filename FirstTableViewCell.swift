@@ -9,7 +9,10 @@ import UIKit
 
 class FirstTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    var arrProductPhotos:[String] = ["(1)","()","(3)","(2)","(1)","()","(3)","(2)"]
+    var label: [String] = ["Skin Care","NEW ITEN","Before/after","채우는","Skin Care","NEW ITEN","Before/after","NEW ITEN"]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,12 +32,13 @@ class FirstTableViewCell: UITableViewCell {
 
 extension FirstTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return arrProductPhotos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "First", for: indexPath) as! FirstCollectionViewCell
-       
+        cell.img.image = UIImage(named: arrProductPhotos[indexPath.row]) ?? UIImage()
+        cell.colLabel.text = label[indexPath.row]
         return cell
     }
     

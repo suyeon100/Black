@@ -14,6 +14,7 @@ class SecondTVCell: UITableViewCell {
     @IBOutlet weak var collectionview: UICollectionView!
     
     var arrProductPhotos:[String] = ["I","M","G","IMG"]
+   
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,7 +44,12 @@ extension SecondTVCell: UICollectionViewDataSource, UICollectionViewDelegate, UI
     
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 250)
+        let margin: CGFloat = 20
+        let width: CGFloat = (collectionView.bounds.width - margin)/2
+        let height: CGFloat = width * 1.4
+
+        return CGSize(width: width, height: height )
+//        return CGSize(width: 200, height: 250)
     }
 
     

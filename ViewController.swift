@@ -61,7 +61,7 @@ extension ViewController : NaverThirdPartyLoginConnectionDelegate {
     // RESTful API, id가져오기
     func getInfo() {
       guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow() else { return }
-      
+//      
       if !isValidAccessToken {
         return
       }

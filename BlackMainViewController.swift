@@ -74,7 +74,7 @@ extension BlackMainViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row{
         case 0:
-            return 300
+            return 280
         case 1:
             return 180
         case 2:
